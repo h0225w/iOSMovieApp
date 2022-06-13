@@ -17,6 +17,10 @@
 		B7DF595E2857627F000C4889 /* iOSMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF595D2857627F000C4889 /* iOSMovieAppUITests.swift */; };
 		B7DF59602857627F000C4889 /* iOSMovieAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF595F2857627F000C4889 /* iOSMovieAppUITestsLaunchTests.swift */; };
 		B7DF596E28576452000C4889 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B7DF596D28576452000C4889 /* Alamofire */; };
+		B7DF5971285779C9000C4889 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B7DF5970285779C9000C4889 /* KakaoSDK */; };
+		B7DF5973285779C9000C4889 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B7DF5972285779C9000C4889 /* KakaoSDKAuth */; };
+		B7DF5975285779C9000C4889 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = B7DF5974285779C9000C4889 /* KakaoSDKCommon */; };
+		B7DF5977285779C9000C4889 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = B7DF5976285779C9000C4889 /* KakaoSDKUser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DF5975285779C9000C4889 /* KakaoSDKCommon in Frameworks */,
 				B7DF596E28576452000C4889 /* Alamofire in Frameworks */,
+				B7DF5971285779C9000C4889 /* KakaoSDK in Frameworks */,
+				B7DF5977285779C9000C4889 /* KakaoSDKUser in Frameworks */,
+				B7DF5973285779C9000C4889 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,10 @@
 			name = iOSMovieApp;
 			packageProductDependencies = (
 				B7DF596D28576452000C4889 /* Alamofire */,
+				B7DF5970285779C9000C4889 /* KakaoSDK */,
+				B7DF5972285779C9000C4889 /* KakaoSDKAuth */,
+				B7DF5974285779C9000C4889 /* KakaoSDKCommon */,
+				B7DF5976285779C9000C4889 /* KakaoSDKUser */,
 			);
 			productName = iOSMovieApp;
 			productReference = B7DF59392857627F000C4889 /* iOSMovieApp.app */;
@@ -222,6 +234,7 @@
 			mainGroup = B7DF59302857627F000C4889;
 			packageReferences = (
 				B7DF596C28576452000C4889 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = B7DF593A2857627F000C4889 /* Products */;
 			projectDirPath = "";
@@ -616,6 +629,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -623,6 +644,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7DF596C28576452000C4889 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		B7DF5970285779C9000C4889 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		B7DF5972285779C9000C4889 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		B7DF5974285779C9000C4889 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		B7DF5976285779C9000C4889 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7DF596F285779C9000C4889 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
