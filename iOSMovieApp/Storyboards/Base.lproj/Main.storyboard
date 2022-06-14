@@ -39,7 +39,21 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="kakaoLoginTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcG-sp-Z0e"/>
+                                    <action selector="kakaoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ET-Ns-BD5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박현우님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-nZ-zav">
+                                <rect key="frame" x="20" y="64" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2j-fE-VA5">
+                                <rect key="frame" x="13" y="95" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egA-dd-4bS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,12 +61,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JJ3-SL-Oix" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0sb-dt-kdh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fJa-nZ-zav" secondAttribute="trailing" constant="10" id="3yu-wF-qzJ"/>
+                            <constraint firstItem="h2j-fE-VA5" firstAttribute="top" secondItem="fJa-nZ-zav" secondAttribute="bottom" constant="10" id="FHR-aE-WC7"/>
+                            <constraint firstItem="fJa-nZ-zav" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="P5N-QG-3ex"/>
                             <constraint firstItem="JJ3-SL-Oix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SeL-Tb-PPj"/>
+                            <constraint firstItem="fJa-nZ-zav" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ze5-3W-qsG"/>
+                            <constraint firstItem="h2j-fE-VA5" firstAttribute="centerX" secondItem="fJa-nZ-zav" secondAttribute="centerX" id="bNW-C7-xWD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MY" image="person.fill" catalog="system" id="E8t-pN-vS0"/>
                     <connections>
                         <outlet property="kakaoLoginBtn" destination="JJ3-SL-Oix" id="hZJ-0h-tEr"/>
+                        <outlet property="logoutBtn" destination="h2j-fE-VA5" id="xEP-R1-Qxp"/>
+                        <outlet property="nickNameLabel" destination="fJa-nZ-zav" id="KUL-pq-ypQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
