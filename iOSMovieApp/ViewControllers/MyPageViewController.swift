@@ -9,11 +9,11 @@ import UIKit
 import KakaoSDKUser
 
 class MyPageViewController: UIViewController {
-
+    @IBOutlet weak var kakaoLoginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func kakaoLoginTest(_ sender: Any) {
