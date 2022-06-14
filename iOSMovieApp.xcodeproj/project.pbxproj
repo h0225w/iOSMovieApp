@@ -86,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72ACD312858767C00A930C7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7DF593C2857627F000C4889 /* AppDelegate.swift */,
+				B7DF593E2857627F000C4889 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B72ACD322858768800A930C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7DF59402857627F000C4889 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B72ACD332858769A00A930C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B7DF59422857627F000C4889 /* Main.storyboard */,
+				B7DF59472857627F000C4889 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		B7DF59302857627F000C4889 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +135,10 @@
 		B7DF593B2857627F000C4889 /* iOSMovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				B7DF593C2857627F000C4889 /* AppDelegate.swift */,
-				B7DF593E2857627F000C4889 /* SceneDelegate.swift */,
-				B7DF59402857627F000C4889 /* ViewController.swift */,
-				B7DF59422857627F000C4889 /* Main.storyboard */,
+				B72ACD312858767C00A930C7 /* App */,
+				B72ACD332858769A00A930C7 /* Storyboards */,
+				B72ACD322858768800A930C7 /* ViewControllers */,
 				B7DF59452857627F000C4889 /* Assets.xcassets */,
-				B7DF59472857627F000C4889 /* LaunchScreen.storyboard */,
 				B7DF594A2857627F000C4889 /* Info.plist */,
 			);
 			path = iOSMovieApp;
