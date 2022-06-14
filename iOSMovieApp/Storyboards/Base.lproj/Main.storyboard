@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bh5-83-lTt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--영화-->
+        <scene sceneID="Hf3-5p-hY0">
+            <objects>
+                <viewController storyboardIdentifier="MovieListViewController" id="5cd-c0-KgV" customClass="MovieListViewController" customModule="iOSMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap8-nJ-qla">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jVc-Cv-JCn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="영화" image="list.and.film" catalog="system" id="w3J-My-zn4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0s-cP-MfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="52"/>
+        </scene>
+        <!--MY-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" id="BYZ-38-t0r" customClass="MyPageViewController" customModule="iOSMovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +37,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                 <connections>
-                                    <action selector="kakaoLoginTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1no-1A-g8w"/>
+                                    <action selector="kakaoLoginTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcG-sp-Z0e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,13 +48,34 @@
                             <constraint firstItem="JJ3-SL-Oix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SeL-Tb-PPj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="MY" image="person.fill" catalog="system" id="E8t-pN-vS0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="442" y="52"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="jgE-bG-c7M">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="Bh5-83-lTt" customClass="TabBarViewController" customModule="iOSMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hpH-jN-qSC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5cd-c0-KgV" kind="relationship" relationship="viewControllers" id="esq-Wz-1YW"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qo0-dB-SAO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Uf-La-8o1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="-837"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.and.film" catalog="system" width="128" height="86"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,17 +1,18 @@
 //
-//  ViewController.swift
+//  MyPageViewController.swift
 //  iOSMovieApp
 //
-//  Created by 박현우 on 2022/06/13.
+//  Created by 박현우 on 2022/06/14.
 //
 
 import UIKit
 import KakaoSDKUser
 
-class ViewController: UIViewController {
-    
+class MyPageViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +31,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-}
 
+}
