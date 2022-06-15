@@ -12,8 +12,8 @@ class MovieList {
     let display = 10 // n개 노출
     let start = 1 // 시작 지점
     
-    func getMovieList(_ search: Search?) {
-        let query = search?.query ?? "영화"
+    func getMovieList(_ search: Search?, completion: @escaping ([Item]) -> Void) {
+        let query = search?.query ?? "쥬라기"
         let genre = search?.genre ?? 0
         
         var url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=\(display)&start=\(start)&genre=\(genre)"
@@ -36,7 +36,7 @@ class MovieList {
                         
                         guard let movieListData = try? decoder.decode(MovieListData.self, from: jsonData) else { return }
                         
-                        print(movieListData.items)
+                        completion(movieListData.items)
                     }
                 case let .failure(error):
                     print(error)

@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="ap8-nJ-qla">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pxh-Zd-IWn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jVc-Cv-JCn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pxh-Zd-IWn" firstAttribute="leading" secondItem="jVc-Cv-JCn" secondAttribute="leading" id="1De-Pf-FN1"/>
+                            <constraint firstItem="jVc-Cv-JCn" firstAttribute="bottom" secondItem="pxh-Zd-IWn" secondAttribute="bottom" id="GUT-Cv-1Kr"/>
+                            <constraint firstItem="pxh-Zd-IWn" firstAttribute="top" secondItem="jVc-Cv-JCn" secondAttribute="top" id="hez-ml-hfC"/>
+                            <constraint firstItem="jVc-Cv-JCn" firstAttribute="trailing" secondItem="pxh-Zd-IWn" secondAttribute="trailing" id="wCc-7X-3kH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="영화" image="list.and.film" catalog="system" id="w3J-My-zn4"/>
+                    <connections>
+                        <outlet property="tableView" destination="pxh-Zd-IWn" id="CYy-jJ-PPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0s-cP-MfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
