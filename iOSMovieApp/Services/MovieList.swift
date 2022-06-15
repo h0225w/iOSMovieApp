@@ -9,8 +9,17 @@ import Foundation
 import Alamofire
 
 class MovieList {
-    func getMovieList() {
-        let url = "https://openapi.naver.com/v1/search/movie.json?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1"
+    let display = 10 // n개 노출
+    let start = 1 // 시작 지점
+    
+    func getMovieList(_ search: Search?) {
+        let query = search?.query ?? "영화"
+        let genre = search?.genre ?? 0
+        
+        var url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=\(display)&start=\(start)&genre=\(genre)"
+        
+        url = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
         let headers: HTTPHeaders = [
             "X-Naver-Client-Id": "rEMQnbLOpQcPKX5lgZf4",
             "X-Naver-Client-Secret": "6BhYa_dxJq"

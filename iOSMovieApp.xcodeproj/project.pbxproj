@@ -11,6 +11,7 @@
 		B72ACD3928587E8E00A930C7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ACD3828587E8E00A930C7 /* TabBarViewController.swift */; };
 		B72ACD3D285975C100A930C7 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ACD3C285975C100A930C7 /* MovieList.swift */; };
 		B72ACD3F2859783500A930C7 /* MovieListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ACD3E2859783500A930C7 /* MovieListData.swift */; };
+		B7B6A310285A0C880093ACAA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6A30F285A0C880093ACAA /* Search.swift */; };
 		B7DF593D2857627F000C4889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF593C2857627F000C4889 /* AppDelegate.swift */; };
 		B7DF593F2857627F000C4889 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF593E2857627F000C4889 /* SceneDelegate.swift */; };
 		B7DF59412857627F000C4889 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF59402857627F000C4889 /* MovieListViewController.swift */; };
@@ -49,6 +50,7 @@
 		B72ACD3828587E8E00A930C7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B72ACD3C285975C100A930C7 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		B72ACD3E2859783500A930C7 /* MovieListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListData.swift; sourceTree = "<group>"; };
+		B7B6A30F285A0C880093ACAA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		B7DF59392857627F000C4889 /* iOSMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DF593C2857627F000C4889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7DF593E2857627F000C4889 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B7B6A30E285A0C6F0093ACAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6A30F285A0C880093ACAA /* Search.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B7DF59302857627F000C4889 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		B7DF593B2857627F000C4889 /* iOSMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7B6A30E285A0C6F0093ACAA /* Models */,
 				B72ACD3A2859757C00A930C7 /* VO */,
 				B72ACD3B2859758100A930C7 /* Services */,
 				B72ACD312858767C00A930C7 /* App */,
@@ -336,6 +347,7 @@
 				B72ACD3F2859783500A930C7 /* MovieListData.swift in Sources */,
 				B7DF593D2857627F000C4889 /* AppDelegate.swift in Sources */,
 				B7DF593F2857627F000C4889 /* SceneDelegate.swift in Sources */,
+				B7B6A310285A0C880093ACAA /* Search.swift in Sources */,
 				B72ACD3928587E8E00A930C7 /* TabBarViewController.swift in Sources */,
 				B72ACD3728587E3800A930C7 /* MyPageViewController.swift in Sources */,
 			);

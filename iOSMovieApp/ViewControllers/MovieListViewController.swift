@@ -13,6 +13,6 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        movieList.getMovieList()
+        movieList.getMovieList(nil)
     }
 }
