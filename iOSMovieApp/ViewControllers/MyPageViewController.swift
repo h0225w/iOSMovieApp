@@ -27,7 +27,7 @@ class MyPageViewController: UIViewController {
         kakaoLoginCheck()
     }
     
-    // MARK: 카카오 로그인 > 카카오톡으로 로그인
+    // MARK: 카카오 로그인 > 카카오계정으로 로그인
     @IBAction func kakaoLogin(_ sender: Any) {
         UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                 if let error = error {
