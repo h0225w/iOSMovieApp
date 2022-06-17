@@ -27,14 +27,17 @@ class MyPageViewController: UIViewController {
         kakaoLoginCheck()
     }
     
-    // MARK: 카카오 로그인 > 카카오계정으로 로그인
+    // MARK: 카카오 로그인
     @IBAction func kakaoLogin(_ sender: Any) {
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+        // 카카오톡이 설치되어 있는 경우
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            // 카카오 로그인
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 }
                 else {
-                    print("loginWithKakaoAccount() success.")
+                    print("loginWithKakaoTalk() success.")
 
                     //do something
                     _ = oauthToken
@@ -42,6 +45,22 @@ class MyPageViewController: UIViewController {
                     self.getKakaoUserInfo()
                 }
             }
+        } else {
+            // 카카오 계정으로 로그인
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    else {
+                        print("loginWithKakaoAccount() success.")
+
+                        //do something
+                        _ = oauthToken
+                        
+                        self.getKakaoUserInfo()
+                    }
+                }
+        }
     }
 
     // MARK: 카카오 로그인 > 로그아웃
